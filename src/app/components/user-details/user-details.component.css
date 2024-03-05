@@ -1,0 +1,29 @@
+ .container.text-center {
+     margin-top: 55px;
+ }
+
+ .row.align-items-start {
+     color: #fff;
+     font-family: 'Arial', sans-serif;
+     font-weight: bold;
+     font-size: 16px;
+ }
+
+ .row.align-items-start .col:nth-child(1) {
+    margin-bottom: 20px; 
+}
+
+.row.align-items-start .col {
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.col-3 {
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    width: 310px;
+}
