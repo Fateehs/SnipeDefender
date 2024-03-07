@@ -1,54 +1,204 @@
 <div class="container">
-    <div class="row text-center">
-        <div class="col">
-            <app-profile-pictures></app-profile-pictures>
-            <div class="mt-3">BASE INFILICTOR</div>
+  <div class="row text-center mt-5">
+    <div class="col" style="font-size: larger">
+      <app-profile-pictures></app-profile-pictures>
+      <div
+        class="mt-3"
+        style="
+          font-size: 24px;
+          border: 2px solid black;
+          border-radius: 10px;
+          background-color: #ffe500;
+          color: black;
+        "
+      >
+        <div
+          style="
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+          "
+        >
+          BASE INFILICTOR
         </div>
-        <div class="col">
-            SteamID
-            <app-steam-id></app-steam-id>
-        </div>
-        <div class="col">
-            Twitch
-            <a class="row-4" style="margin-top: 8px; display: block;" href="https://www.twitch.tv/fateehmeister"
-                target="_blank">fateehmeister</a>
-        </div>
-        <div class="col">
-            Hours
-            <div class="row-4" style="margin-top: 10px;">3862</div>
-        </div>
-        <div class="col">
-            Reputation
-            <div class="row-4" style="margin-top: 10px; color: red;">-14</div>
-        </div>
+      </div>
+      <div class="mt-2">
+        <button class="custom-button" style="background-color: #ff0000">
+          REPORT
+        </button>
+        <button
+          class="custom-button"
+          style="background-color: #00ff00; margin-left: 12.5px"
+        >
+          COMMENT
+        </button>
+      </div>
     </div>
-    <div class="row mt-4">
-        <div class="col-10 border border-dark border-3 rounded" style="background-color: rgba(255, 90, 90, 0.5);">
-            <div class="mx-3 my-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget sapien placerat, lacinia risus eu,
-                consequat justo. Quisque vitae dolor pharetra, venenatis enim sed, fringilla tellus. Praesent eget nunc
-                vitae elit finibus pellentesque. Duis tellus eros, ornare id rutrum vitae, elementum et nisi. Sed
-                lacinia risus a gravida placerat. Nullam vitae commodo orci. Sed aliquam vitae sem id feugiat.
-                Suspendisse ut ante ac metus iaculis sodales. Cras nunc tortor, efficitur vel eros nec, maximus
-                facilisis erat nec.
-            </div>
+    <div class="col" style="font-size: larger">
+      <div
+        style="
+          font-size: 24px;
+          border: 2px solid black;
+          border-radius: 10px;
+          background-color: #ffe500;
+          color: black;
+        "
+      >
+        <div
+          style="
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+          "
+        >
+          SteamID
         </div>
-        <div class="col-2 d-flex align-items-center ps-4">
-            <img class="flex-shrink-0 text-center border border-dark border-3 rounded ml-5" style="max-width: 200px; max-height: 85px;"
-                src="data:image/png;base64,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">
-        </div>
+      </div>
+      <app-steam-id></app-steam-id>
     </div>
-    <div class="row mt-4">
-        <div class="col-10 border border-dark border-3 rounded" style="background-color: rgba(90, 255, 90, 0.5);">
-            <div class="mx-3 my-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget sapien placerat, lacinia risus eu,
-                consequat justo. Quisque vitae dolor pharetra, venenatis enim sed, fringilla tellus. Praesent eget nunc
-                vitae elit finibus pellentesque. Duis tellus eros, ornare id rutrum vitae, elementum et nisi.
-            </div>
+    <div class="col" style="font-size: larger">
+      <div
+        style="
+          font-size: 24px;
+          border: 2px solid black;
+          border-radius: 10px;
+          background-color: #ffe500;
+          color: black;
+        "
+      >
+        <div
+          style="
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+          "
+        >
+          Twitch
         </div>
-        <div class="col-2 d-flex align-items-center ps-4">
-            <img class="flex-shrink-0 text-center border border-dark border-3 rounded ml-5" style="max-width: 200px; max-height: 85px;"
-                src="data:image/png;base64,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">
+      </div>
+      <a
+        href="https://www.twitch.tv/fateehmeister"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div
+          class="custom-row"
+          style="margin-top: 10px; cursor: pointer; text-decoration: underline"
+        >
+          fateehmeister
         </div>
+      </a>
     </div>
+    <div class="col" style="font-size: larger">
+      <div
+        style="
+          font-size: 24px;
+          border: 2px solid black;
+          border-radius: 10px;
+          background-color: #ffe500;
+          color: black;
+        "
+      >
+        <div
+          style="
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+          "
+        >
+          Hours
+        </div>
+      </div>
+      <div class="custom-row" style="margin-top: 10px">3862</div>
+    </div>
+    <div class="col" style="font-size: larger">
+      <div
+        style="
+          font-size: 24px;
+          border: 2px solid black;
+          border-radius: 10px;
+          background-color: #ffe500;
+          color: black;
+        "
+      >
+        <div
+          style="
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+          "
+        >
+          Discord
+        </div>
+      </div>
+      <div class="custom-row" style="margin-top: 10px">fateehs</div>
+    </div>
+    <div class="col" style="font-size: larger">
+      <div
+        style="
+          font-size: 24px;
+          border: 2px solid black;
+          border-radius: 10px;
+          background-color: #ffe500;
+          color: black;
+        "
+      >
+        <div
+          style="
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+          "
+        >
+          Reputation
+        </div>
+      </div>
+      <div class="custom-row" style="margin-top: 10px; color: red">-14</div>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div
+      class="col-10 border border-dark border-3 rounded"
+      style="background-color: rgba(255, 90, 90, 0.5)"
+    >
+      <div class="mx-3 my-3">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget sapien
+        placerat, lacinia risus eu, consequat justo. Quisque vitae dolor
+        pharetra, venenatis enim sed, fringilla tellus. Praesent eget nunc vitae
+        elit finibus pellentesque. Duis tellus eros, ornare id rutrum vitae,
+        elementum et nisi. Sed lacinia risus a gravida placerat. Nullam vitae
+        commodo orci. Sed aliquam vitae sem id feugiat. Suspendisse ut ante ac
+        metus iaculis sodales. Cras nunc tortor, efficitur vel eros nec, maximus
+        facilisis erat nec.
+      </div>
+    </div>
+    <div class="col-2 d-flex align-items-center ps-4">
+      <img
+        class="flex-shrink-0 text-center border border-dark border-3 rounded ml-5"
+        style="max-width: 200px; max-height: 85px"
+        src="data:image/png;base64,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"
+      />
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div
+      class="col-10 border border-dark border-3 rounded"
+      style="background-color: rgba(90, 255, 90, 0.5)"
+    >
+      <div class="mx-3 my-3">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget sapien
+        placerat, lacinia risus eu, consequat justo. Quisque vitae dolor
+        pharetra, venenatis enim sed, fringilla tellus. Praesent eget nunc vitae
+        elit finibus pellentesque. Duis tellus eros, ornare id rutrum vitae,
+        elementum et nisi.
+      </div>
+    </div>
+    <div class="col-2 d-flex align-items-center ps-4">
+      <img
+        class="flex-shrink-0 text-center border border-dark border-3 rounded ml-5"
+        style="max-width: 200px; max-height: 85px"
+        src="data:image/png;base64,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"
+      />
+    </div>
+  </div>
 </div>

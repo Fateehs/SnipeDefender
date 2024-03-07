@@ -1,7 +1,5 @@
 .card {
     width: 18rem;
-    border: 8px solid #ce422b; /* Çerçeve rengi */
-    border-radius: 8px; /* Çerçeve kenar yumuşaklığı */
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
 }

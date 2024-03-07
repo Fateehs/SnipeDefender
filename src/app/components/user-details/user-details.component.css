@@ -1,29 +1,29 @@
- .container.text-center {
-     margin-top: 55px;
- }
-
- .row{
-     color: #fff;
-     font-family: 'Arial', sans-serif;
-     font-weight: bold;
-     font-size: 16px;
- }
-
- .row.align-items-start .col:nth-child(1) {
-    margin-bottom: 20px; 
+.custom-button {
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.row.align-items-start .col {
-    color: #fff;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    font-size: 21px;
+.custom-button:hover {
+  background-color: #333;
+  color: #fff;
 }
 
-.col-3 {
-    color: #fff;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    font-size: 24px;
-    width: 310px;
+.custom-row {
+  color: #ffe500; /* Pembe renk */
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Gölge efekti */
+  background-image: linear-gradient(to right, #000000, #474747); /* Arka plan gradyan */
+  padding: 10px;
+  border-radius: 10px; /* Kenar yuvarlaklığı */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Kutu gölge efekti */
+  transition: transform 0.3s ease-in-out; /* Hareket geçiş efekti */
 }
+
+.custom-row:hover {
+  transform: scale(1.1); /* Fare üzerine gelindiğinde büyütme efekti */
+}
+
+
