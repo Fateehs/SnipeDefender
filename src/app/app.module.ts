@@ -7,6 +7,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { ProfilePicturesComponent } from './components/user-details/profile-picture/profile-pictures/profile-pictures.component';
 import { SteamIdComponent } from './components/user-details/steam-id/steam-id.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SteamIdComponent } from './components/user-details/steam-id/steam-id.co
     SearchBarComponent,
     UserDetailsComponent,
     ProfilePicturesComponent,
-    SteamIdComponent
+    SteamIdComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
