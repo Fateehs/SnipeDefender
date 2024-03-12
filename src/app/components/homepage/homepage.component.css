@@ -18,3 +18,7 @@
     background-color: #3498db; /* Turquoise background on hover */
     color: #ffffff; /* White text color on hover */
 }
+
+h1, h4, h6 {
+    color: rgb(0, 0, 0); /* Başlık renkleri */
+}

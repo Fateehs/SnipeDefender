@@ -1,5 +1,6 @@
-<div class="container">
-  <div class="row text-center mt-5">
+<div class="container" style="background-color: rgba(0, 0, 0, 0.3); padding: 40px; border-radius: 10px;
+">
+  <div class="row text-center mt-2">
     <h1>SnipeDefender</h1>
   </div>
   <div class="row text-center mt-3">
@@ -15,13 +16,9 @@
       feugiat diam. Donec leo nisl, rutrum.
     </h6>
   </div>
-  <div class="row mt-5">
+  <div class="row mt-4">
     <ul class="list-group">
-      <li class="list-group-item">An item</li>
-      <li class="list-group-item">A second item</li>
-      <li class="list-group-item">A third item</li>
-      <li class="list-group-item">A fourth item</li>
-      <li class="list-group-item">And a fifth one</li>
+      <li class="list-group-item" *ngFor="let veri of backendVerileri.slice(0, 15)">{{ veri }}</li>
     </ul>
   </div>
 </div>
