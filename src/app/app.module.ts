@@ -8,6 +8,7 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
 import { ProfilePicturesComponent } from './components/user-details/profile-picture/profile-pictures/profile-pictures.component';
 import { SteamIdComponent } from './components/user-details/steam-id/steam-id.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,8 +22,9 @@ import { HomepageComponent } from './components/homepage/homepage.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
