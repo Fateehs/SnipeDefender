@@ -22,27 +22,22 @@
       feugiat diam. Donec leo nisl, rutrum.
     </h6>
   </div>
-  <div class="row mt-4" *ngFor="let user of users.slice(0,15)">
-    <div class="col">
-      {{ user.userName }}
-      <!-- <ul class="list-group">
-        <li class="list-group-item" *ngFor="let user of users.slice(0, 15)">
-          {{ user.userName }} {{ user.steamID }} {{ user.twitch }}
-          {{ user.discord }} {{ user.reputation }}
-        </li>
-      </ul> -->
+  <div class="row mt-4" *ngFor="let player of players.slice(0, 15)" style="color: white; border: 3px solid #000000; background-color: rgba(128, 128, 128, 0.116);
+  border-radius: 50px; padding: 2.5px;">
+    <div class="col-2" style="text-align: center; margin-top: 15px;">
+      <img
+        class="rounded-circle"
+        src="{{ player.steamPicture }}"
+        style="width: 50px; height: 50px; border: 2px solid black;"
+      />
+      <br>
+      {{player.reputation}}
     </div>
-    <div class="col">
-      {{ user.steamID }}
+    <div class="col-8 mt-3" >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus
+      metus interdum, efficitur nisi vel, tristique dolor. Nunc ut mi bibendum,
+      laoreet dui ac, dignissim tortor. Ut non mauris sit amet risus.
     </div>
-    <div class="col">
-      {{ user.twitch }}
-    </div>
-    <div class="col">
-      {{ user.discord }}
-    </div>
-    <div class="col">
-      {{ user.reputation }}
-    </div>
+    <div class="col-2 hoverbutton center-content" style="color: gold; font-weight: bolder;">Go to Profile</div>
   </div>
 </div>

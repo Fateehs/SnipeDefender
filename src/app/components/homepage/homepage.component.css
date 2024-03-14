@@ -1,27 +1,43 @@
 .list-group {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .col {
-    background-color: transparent; /* Transparent background */
-    border: 1px solid #3498db; /* Dark turquoise border */
-    border-radius: 10px; /* More rounded corners */
-    color: #ffffff; /* Turquoise text color */
-    margin-bottom: 10px; /* Increased spacing between list items */
-    padding: 15px; /* More padding inside the list items */
-    transition: background-color 0.3s ease; /* Smooth color transition */
-    cursor: pointer; /* Change cursor on hover */
-    font-size: large;
-    text-align: center;
-
+  background-color: transparent; /* Transparent background */
+  border: 1px solid #3498db; /* Dark turquoise border */
+  border-radius: 5px; /* More rounded corners */
+  color: #ffffff; /* Turquoise text color */
+  margin-bottom: 5px; /* Increased spacing between list items */
+  padding: 17px; /* More padding inside the list items */
+  transition: background-color 0.3s ease; /* Smooth color transition */
+  cursor: pointer; /* Change cursor on hover */
+  font-size: medium;
 }
 
 .col:hover {
-    background-color: #3498db; /* Turquoise background on hover */
-    color: #ffffff; /* White text color on hover */
+  background-color: #3498db; /* Turquoise background on hover */
+  color: #ffffff; /* White text color on hover */
 }
 
-h1, h4, h6 {
-    color: rgb(255, 255, 255); /* Başlık renkleri */
+h1,
+h4,
+h6 {
+  color: rgb(255, 255, 255); /* Başlık renkleri */
+}
+
+.hoverbutton {
+  transition: background-color 0.3s, border-radius 0.5s;
+}
+
+.hoverbutton:hover {
+  background-color: rgba(255, 255, 0, 0.103);
+  transition-delay: 0.5s;
+  border-radius: 50px;
+}
+
+.center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

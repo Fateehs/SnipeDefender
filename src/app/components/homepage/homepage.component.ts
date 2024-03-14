@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../entities/user';
-import { UserService } from '../../services/common/user.service';
+import { Player } from '../../entities/player';
+import { PlayerService } from '../../services/common/player.service';
 
 @Component({
   selector: 'app-homepage',
@@ -8,14 +8,14 @@ import { UserService } from '../../services/common/user.service';
   styleUrl: './homepage.component.css',
 })
 export class HomepageComponent implements OnInit {
-  users: User[] = [];
+  players: Player[] = [];
 
-  constructor(private userService: UserService) { }
+  constructor(private playerService: PlayerService) {}
 
   ngOnInit(): void {
-    this.userService.getUsers().subscribe(
+    this.playerService.getPlayers().subscribe(
       (data) => {
-        this.users = data;
+        this.players = data;
       },
       (error) => {
         console.error('Error fetching users:', error);
