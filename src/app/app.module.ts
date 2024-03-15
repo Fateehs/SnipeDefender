@@ -5,24 +5,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
-import { ProfilePicturesComponent } from './components/user-details/profile-picture/profile-pictures/profile-pictures.component';
 import { SteamIdComponent } from './components/user-details/steam-id/steam-id.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './components/header/header.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
     UserDetailsComponent,
-    ProfilePicturesComponent,
     SteamIdComponent,
-    HomepageComponent
+    HomepageComponent,
+    HeaderComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]

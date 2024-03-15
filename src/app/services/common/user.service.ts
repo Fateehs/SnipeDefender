@@ -4,14 +4,19 @@ import { Observable } from 'rxjs';
 import { User } from '../../entities/user';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
-  private apiUrl = 'http://localhost:5136'; 
+  private apiUrl = 'http://localhost:5136';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(`${this.apiUrl}/api/users`);
+  }
+
+  login(username: string, password: string) {
+    const loginData = { username, password };
+    return this.http.post<any>(`${this.apiUrl}/api/users/login`, loginData);
   }
 }
