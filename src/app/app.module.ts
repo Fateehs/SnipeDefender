@@ -11,6 +11,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { PlayerDetailsComponent } from './components/player-details/player-details.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     SteamIdComponent,
     HomepageComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    PlayerDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [HttpClient],
+  providers: [HttpClient, provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -14,4 +14,8 @@ export class PlayerService {
   getPlayers(): Observable<Player[]> {
     return this.http.get<Player[]>(`${this.apiUrl}/api/players`);
   }
+
+  fetchUserDetails(playerId: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/api/players/${playerId}`);
+  }
 }

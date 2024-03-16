@@ -4,3 +4,6 @@ body {
   background-repeat: no-repeat !important;
   background-attachment: fixed !important; /* sayfa kaydırıldığında arka planın sabit kalmasını sağlar */
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

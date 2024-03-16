@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from '../../entities/player';
 import { PlayerService } from '../../services/common/player.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
@@ -10,7 +11,7 @@ import { PlayerService } from '../../services/common/player.service';
 export class HomepageComponent implements OnInit {
   players: Player[] = [];
 
-  constructor(private playerService: PlayerService) {}
+  constructor(private playerService: PlayerService, private router: Router) {}
 
   ngOnInit(): void {
     this.playerService.getPlayers().subscribe(
@@ -21,5 +22,9 @@ export class HomepageComponent implements OnInit {
         console.error('Error fetching users:', error);
       }
     );
+  }
+
+  goToProfile(player:any){
+    this.router.navigate(['/playerdetails'], {queryParams: {id: player.id}});
   }
 }
