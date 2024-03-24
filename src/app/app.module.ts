@@ -13,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { PlayerDetailsComponent } from './components/player-details/player-details.component';
+import { CommentComponent } from './components/comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PlayerDetailsComponent } from './components/player-details/player-detai
     HomepageComponent,
     HeaderComponent,
     LoginComponent,
-    PlayerDetailsComponent
+    PlayerDetailsComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
