@@ -4,12 +4,13 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PlayerDetailsComponent } from './components/player-details/player-details.component';
+import { AuthGuard } from './features/guards/auth.guard';
 
 const routes: Routes = [
   { path: '', component: HeaderComponent },
-  { path: 'homepage', component: HomepageComponent },
-  { path: 'playerdetails', component: PlayerDetailsComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'homepage', component: HomepageComponent, canActivate: [AuthGuard]},
+  { path: 'playerdetails', component: PlayerDetailsComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({

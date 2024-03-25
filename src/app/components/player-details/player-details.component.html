@@ -174,7 +174,7 @@
             class="text-white blockquote mb-0"
             style="font-size: smaller"
           >
-            <p style="font-size: 14px">{{ playerData?.reputation }}</p>
+            <p style="font-size: 14px">{{ totalReputation }}</p>
           </blockquote>
         </div>
       </div>
@@ -187,8 +187,10 @@
   </div>
   <div *ngFor="let comment of comments" class="row mt-5">
     <div
-      class="col-10 border rounded border-success"
-      style="background-color: #0c660070"
+      class="col-10 border border-dark rounded border-2"
+      [ngStyle]="{
+        'background-color': comment.reputation < 0 ? '#ff00002f' : '#0c660070'
+      }"
     >
       <div
         style="max-height: 150px; min-height: 100px"
@@ -197,19 +199,39 @@
         <p
           id="comment-toggle"
           class="text-white"
-          style="font-size: 14px; margin: 0; cursor: pointer"
+          style="font-size: 14px; margin: 0;"
         >
           {{ comment.text }}
         </p>
+        <div style="height: 65px"></div>
+        <div style="display: flex; justify-content: flex-end">
+          <span style="font-size: 12px; color: #ffe500; font-weight: bold">{{
+            comment.createdAt | date : "dd/MM/yyyy HH:mm"
+          }}</span>
+        </div>
       </div>
     </div>
+
     <div class="col-2 d-flex align-items-center">
-      <img
-        style="max-width: 125px"
-        class="rounded-circle"
-        src=""
-        alt=""
-      />
+      <div style="text-align: center">
+        <img
+          style="max-width: 100px; border: 2px solid black"
+          class="rounded-circle"
+          src="{{ comment.userSteamPicture }}"
+          alt=""
+        />
+        <div
+          style="
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffe500;
+            text-shadow: 2px 2px 2px #000000;
+            margin-top: 5px;
+          "
+        >
+          {{ comment.userName }}
+        </div>
+      </div>
     </div>
   </div>
 </div>

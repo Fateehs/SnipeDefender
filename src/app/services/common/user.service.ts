@@ -19,4 +19,8 @@ export class UserService {
     const loginData = { username, password };
     return this.http.post<any>(`${this.apiUrl}/api/users/login`, loginData);
   }
+
+  getUserById(userId: number): Observable<User> {
+    return this.http.get<User>(`/api/Users/${userId}`);
+  }
 }

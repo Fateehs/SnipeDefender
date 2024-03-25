@@ -3,8 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { PlayerService } from '../../services/common/player.service';
 import { Player } from '../../entities/player';
 import { CommentService } from '../../services/common/comment.service';
-import { Comment } from '../../entities/comment'; 
-
+import { Comment } from '../../entities/comment';
+import { UserService } from '../../services/common/user.service';
 
 @Component({
   selector: 'app-player-details',
@@ -16,11 +16,14 @@ export class PlayerDetailsComponent implements OnInit {
   playerData: Player;
   showCommentComponent: boolean = false;
   comments: Comment[];
+  commentUserName: string;
+  totalReputation: number = 0;
 
   constructor(
     private route: ActivatedRoute,
     private playerService: PlayerService,
-    private commentService: CommentService
+    private commentService: CommentService,
+    private userService: UserService
   ) {}
 
   ngOnInit(): void {
@@ -49,8 +52,16 @@ export class PlayerDetailsComponent implements OnInit {
     this.commentService
       .getPlayerCommentsById(this.playerId)
       .subscribe((data: Comment[]) => {
-        console.log(data); 
+        console.log(data);
         this.comments = data;
+        this.calculateTotalReputation();
       });
+  }
+
+  calculateTotalReputation() {
+    this.totalReputation = this.comments.reduce(
+      (total, comment) => total + comment.reputation,
+      0
+    );
   }
 }
