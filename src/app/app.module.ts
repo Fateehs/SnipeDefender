@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
-import { SteamIdComponent } from './components/user-details/steam-id/steam-id.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
@@ -14,18 +13,19 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { PlayerDetailsComponent } from './components/player-details/player-details.component';
 import { CommentComponent } from './components/comment/comment.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AdminComponent } from './components/admin/admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
     UserDetailsComponent,
-    SteamIdComponent,
     HomepageComponent,
     HeaderComponent,
     LoginComponent,
     PlayerDetailsComponent,
     CommentComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

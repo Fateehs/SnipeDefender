@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { UserService } from '../../services/common/user.service';
-import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { AuthService } from '../../services/common/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -13,20 +12,18 @@ export class LoginComponent {
   password: string;
 
   constructor(
-    private userService: UserService,
-    private router: Router,
+    private authService: AuthService,
     private _snackBar: MatSnackBar
   ) {}
 
   onSubmit() {
-    this.userService.login(this.username, this.password).subscribe(
+    this.authService.login(this.username, this.password).subscribe(
       (response) => {
-        localStorage.setItem('token', response.token);
+        localStorage.setItem('token', response.authToken);
         this._snackBar.open('Successfully logged in!', 'Close', {
           duration: 2000,
           verticalPosition: 'bottom',
         });
-        this.router.navigate(['/homepage']);
       },
       (error) => {
         this._snackBar.open('Username or password is incorrect', 'Try again', {
