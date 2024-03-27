@@ -1,4 +1,5 @@
 export class Player {
+    id: number;
     steamID: string;
     userName: string;
     twitch: string;

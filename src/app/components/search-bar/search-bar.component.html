@@ -1,8 +1,13 @@
-<div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Search" aria-label="Ara" aria-describedby="search-button">
-    <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button" id="search-button">
-            <img src="assets\search.png" alt="Search Icon" style="height: 32px;">
-        </button>
+<div class="row">
+    <div class="input-group mb-3">
+        <form (ngSubmit)="onSubmit()" class="form-group">
+            <input type="text" class="form-control" name="steamId" placeholder="Search" aria-label="Ara"
+                aria-describedby="search-button" [(ngModel)]="searchQuery">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit" id="search-button">
+                    <img src="assets\search.png" alt="Search Icon" style="height: 32px;">
+                </button>
+            </div>
+        </form>
     </div>
 </div>

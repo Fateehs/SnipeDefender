@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'homepage', component: HomepageComponent, canActivate: [AuthGuard]},
   { path: 'playerdetails', component: PlayerDetailsComponent, canActivate: [AuthGuard]},
-  { path: 'admin', component: AdminComponent, canActivate: [AuthGuard]}
+  { path: 'admin', component: AdminComponent, canActivate: [AuthGuard]},
+  { path: '**', component: HomepageComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({

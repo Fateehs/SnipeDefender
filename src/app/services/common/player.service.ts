@@ -16,6 +16,14 @@ export class PlayerService {
   }
 
   fetchUserDetails(playerId: number): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/api/players/${playerId}`);
+    return this.http.get<any>(`${this.apiUrl}/api/players/player/${playerId}`);
+  }
+
+  getPlayerBySteamId(steamId: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/api/players/steam/${steamId}`);
+  }
+
+  getPlayerByName(username: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/api/players/username/${username}`);
   }
 }
